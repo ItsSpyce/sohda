@@ -1,26 +1,7 @@
-## Electron app.
-### Basic setup with React, Typescript and Webpack.
+# Sohda
 
-To run this project.
+This repository is the monorepo for the Sohda ecosystem. All projects are within `packages` with the following layout:
 
-- Clone this repo
-
-```bash
-  git clone https://github.com/elisealcala/electron-react-ts.git
-```
-
-- Install the dependencies
-
-```bash
-  npm install
-```
-
-- Now run these two commands in separate consoles.
-
-```bash
-  npm run dev:react
-```
-
-```bash
-  npm run dev:electron
-```
+- `api`: the core API to describe Sohda, mixes, and configurations
+- `app`: the desktop app written in Electron. This may run as a CLI if requested
+- `next`: the web app built on NextJS
