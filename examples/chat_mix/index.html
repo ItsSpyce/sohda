@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      globalThis.sohda.connector.on('message', (data) => {
+        const { author, message } = data;
+        const child = new HTMLLIElement();
+        child.appendChild(`${author}: ${message}`);
+        document.getElementById('chatbox').appendChild(child);
+      });
+    </script>
+  </head>
+  <body>
+    <ul id="chatbox"></ul>
+  </body>
+</html>
