@@ -27,3 +27,8 @@ export type Profile = {
 export type ContactPreferences = {
   whenPurchaseMade: boolean;
 };
+
+export interface Connector {
+  send(channel: string, data: any): void;
+  on(channel: string, listener: (data: any) => void): void;
+}

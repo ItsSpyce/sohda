@@ -5,5 +5,11 @@
   "module": "index.d.ts",
   "author": "spyce",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
 }

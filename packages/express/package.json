@@ -1,0 +1,27 @@
+{
+  "name": "sohda-express",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "author": "spyce",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc --build",
+    "start": "ts-node-dev --respawn src/index.ts"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.19.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "graphql": "^15.4.0",
+    "graphql-tools": "^7.0.2",
+    "sohda-api": "^0.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/express": "^4.17.11",
+    "ts-node-dev": "^1.1.1"
+  }
+}
