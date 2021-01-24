@@ -11,10 +11,11 @@ export enum LicenseType {
 }
 
 export type Mix = {
-  authorId: string;
+  author: Profile;
   version: string;
   url?: string;
   license: LicenseType;
+  id: string;
 };
 
 export type Profile = {
@@ -32,3 +33,24 @@ export interface Connector {
   send(channel: string, data: any): void;
   on(channel: string, listener: (data: any) => void): void;
 }
+
+export type Theme = {
+  BLUE_100: string;
+  BLUE_200: string;
+  BLUE_300: string;
+  BLUE_400: string;
+  RED_100: string;
+  RED_200: string;
+  RED_300: string;
+  GREEN_100: string;
+  GREEN_200: string;
+  GREEN_300: string;
+  GREEN_400: string;
+  GREY_100: string;
+  GREY_200: string;
+  GREY_300: string;
+  GREY_400: string;
+  YELLOW: string;
+};
+
+export const colors: Theme;

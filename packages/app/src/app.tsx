@@ -1,10 +1,33 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Provider as FluentProvider } from '@fluentui/react-northstar';
+import { ThemeProvider } from 'styled-components';
+import { StyledApp, Content, Page } from './App.styles';
+import Titlebar from './components/Titlebar';
+import Sidebar from './components/Sidebar';
+import { Dashboard } from './pages';
+import theme from './theme';
 
-const root = document.getElementById('root');
+const sideMenuItems = [{ name: 'Dashboard', route: '/' }];
 
-const App = () => {
-  return <h1>Hi from a react app</h1>;
-};
-
-ReactDom.render(<App />, root);
+export default function App() {
+  return (
+    <FluentProvider theme={{ siteVariables: theme }}>
+      <ThemeProvider theme={theme}>
+        <StyledApp>
+          <Titlebar title="Sohda" />
+          <Content>
+            <Router>
+              <Sidebar menuItems={sideMenuItems} />
+              <Page>
+                <Switch>
+                  <Route path="/" component={Dashboard} />
+                </Switch>
+              </Page>
+            </Router>
+          </Content>
+        </StyledApp>
+      </ThemeProvider>
+    </FluentProvider>
+  );
+}

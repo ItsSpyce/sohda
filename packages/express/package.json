@@ -12,10 +12,15 @@
   "dependencies": {
     "apollo-server-express": "^2.19.2",
     "body-parser": "^1.19.0",
+    "connect-pg-simple": "^6.2.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "graphql": "^15.4.0",
     "graphql-tools": "^7.0.2",
-    "sohda-api": "^0.1.0"
+    "helmet": "^4.4.1",
+    "sohda-api": "^0.1.0",
+    "typescript": "^4.1.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",

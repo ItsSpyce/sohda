@@ -1,0 +1,16 @@
+export const BLUE_100 = '#7ECAE6';
+export const BLUE_200 = '#7AD5EE';
+export const BLUE_300 = '#3584a7';
+export const BLUE_400 = '#30d2be';
+export const RED_100 = '#D01D4A';
+export const RED_200 = '#E0575F';
+export const RED_300 = '#F00A00';
+export const GREEN_100 = '#066E00';
+export const GREEN_200 = '#0BFB78';
+export const GREEN_300 = '#46B922';
+export const GREEN_400 = '#47FEA2';
+export const GREY_100 = '#D0B6F7';
+export const GREY_200 = '#4F5D4B';
+export const GREY_300 = '#65736C';
+export const GREY_400 = '#7E8082';
+export const YELLOW = '#E2991D';

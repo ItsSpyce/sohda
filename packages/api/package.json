@@ -3,12 +3,10 @@
   "version": "0.1.0",
   "description": "API for Sohda",
   "module": "index.d.ts",
+  "main": "dist/index.js",
   "author": "spyce",
   "license": "MIT",
   "private": false,
-  "scripts": {
-    "build": "tsc --build"
-  },
   "devDependencies": {
     "typescript": "^4.1.3"
   }
