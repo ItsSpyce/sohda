@@ -16,16 +16,12 @@ app.use(bodyParser.json());
 app.use(helmet());
 app.use(
   session({
-    store: new PostgresConnect(session),
+    // store: new PostgresConnect(session),
     secret: process.env.APP_AUTH_SECRET,
     resave: false,
     cookie: { maxAge: 30 * 24 * 60 * 60 * 1000, secure: true },
   })
 );
-
-app.get('/', (req, res) => {
-  res.send('Hello');
-});
 
 const port = process.env.APP_PORT;
 app.listen(port, () => {

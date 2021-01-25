@@ -3,8 +3,7 @@
     "target": "ESNext",
     "module": "commonjs",
     "lib": ["dom", "ESNext"],
-    "outDir": "./dist",
-    "typeRoots": ["./types"],
+    "declaration": true,
     "strict": true,
     "esModuleInterop": true
   }
