@@ -6,6 +6,8 @@ import session from 'express-session';
 //@ts-ignore
 import connectPg from 'connect-pg-simple';
 import dotenv from 'dotenv';
+import { seal } from './attributes/express';
+import './controllers';
 
 dotenv.config();
 
@@ -22,6 +24,7 @@ app.use(
     cookie: { maxAge: 30 * 24 * 60 * 60 * 1000, secure: true },
   })
 );
+seal(app);
 
 const port = process.env.APP_PORT;
 app.listen(port, () => {

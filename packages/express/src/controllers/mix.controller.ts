@@ -1,12 +1,15 @@
+import { Controller, HTTP_METHOD } from '../types';
 import { controller, inject, route } from '../attributes/express';
 import MixRepository from '../repositories/mix.repository';
-import { HTTP_METHOD } from '../types';
+import { Response } from 'express';
 
 @controller()
-export default class MixController {
-  @inject()
+export class MixController extends Controller {
+  @inject(MixRepository)
   private mixRepository!: MixRepository;
 
-  @route('/:id', HTTP_METHOD.GET)
-  getById(id: string) {}
+  @route(HTTP_METHOD.GET, '/:id')
+  getById({ id, response }: { id: string; response: Response }) {
+    response.send(id);
+  }
 }

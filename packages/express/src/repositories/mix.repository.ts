@@ -1,4 +1,4 @@
 import { repository } from '../attributes/express';
 
-@repository('mix')
+@repository()
 export default class MixRepository {}

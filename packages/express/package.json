@@ -2,12 +2,13 @@
   "name": "sohda-express",
   "version": "0.1.0",
   "main": "dist/index.js",
+  "module": "src/index.d.ts",
   "author": "spyce",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "tsc --build",
-    "start": "ts-node-dev --respawn src/index.ts"
+    "build": "rm -rf ./dist && tsc --build",
+    "start": "ts-node-dev --files --respawn src/index.ts"
   },
   "dependencies": {
     "apollo-server-express": "^2.19.2",
