@@ -10,12 +10,21 @@ export enum LicenseType {
   OTHER = 'Other',
 }
 
+export enum ImageType {
+  PNG = 'png',
+  JPG = 'jpg',
+  JPEG = 'jpeg',
+  GIF = 'gif',
+}
+
 export type Mix = {
   author: Profile;
   version: string;
   url?: string;
   license: LicenseType;
   id: string;
+  encodedImage: string;
+  imageType: string;
 };
 
 export type Profile = {

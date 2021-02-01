@@ -2,10 +2,9 @@
   "name": "sohda",
   "private": true,
   "scripts": {
-    "postinstall": "lerna bootstrap"
-  },
-  "devDependencies": {
-    "lerna": "^3.22.1"
-  },
-  "dependencies": {}
+    "postinstall": "rush update",
+    "build": "rush rebuild",
+    "start:web": "rush build --to-except sohda-app",
+    "start:app": "rush build --to-except sohda-web"
+  }
 }

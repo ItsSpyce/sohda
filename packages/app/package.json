@@ -242,6 +242,7 @@
     "react-router-dom": "^5.2.0",
     "regenerator-runtime": "^0.13.5",
     "sohda-api": "^0.1.0",
+    "sohda-ui": "^0.1.0",
     "source-map-support": "^0.5.19",
     "styled-components": "^5.2.1"
   },

@@ -24,3 +24,19 @@ export type RouteArgs<T = unknown> = T & {
   session: Session;
   next: NextFunction;
 };
+
+export type RoutePattern = {
+  method: HTTP_METHOD;
+  pattern: string;
+  propertyKey: string;
+};
+
+export type DependencyPattern = {
+  dependency: Function;
+  propertyKey: string;
+};
+
+export type ExpressInjectionState = {
+  routes: RoutePattern[];
+  dependencies: DependencyPattern[];
+};
