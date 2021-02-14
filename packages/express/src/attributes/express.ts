@@ -22,9 +22,6 @@ export const controller = (name?: string) => (ctor: Function) => {
   const basePath =
     name || ctor.name.replace(cleanClassNameRegex, '').toLowerCase();
   const router = Router({ caseSensitive: false });
-  router.use((req, res, next) => {
-    next();
-  });
   const factory = new ControllerFactory(router, ctor, basePath);
   const { routes, dependencies } = state;
   // state.currentFactory = factory;

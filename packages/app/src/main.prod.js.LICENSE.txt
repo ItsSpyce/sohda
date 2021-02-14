@@ -1,1 +1,1 @@
-/** @license URI.js v4.4.1 (c) 2011 Gary Court. License: http://github.com/garycourt/uri-js */
+/*! http://mths.be/fromcodepoint v0.1.0 by @mathias */

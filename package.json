@@ -1,10 +1,16 @@
 {
   "name": "sohda",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "postinstall": "rush update",
-    "build": "rush rebuild",
-    "start:web": "rush build --to-except sohda-app",
-    "start:app": "rush build --to-except sohda-web"
+    "postinstall": "lerna bootstrap",
+    "build": "lerna run build",
+    "start": "lerna run start"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "ts-jest": "^26.5.1"
   }
 }

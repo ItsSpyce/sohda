@@ -9,7 +9,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "start": "tsc --build --watch"
   },
   "devDependencies": {
     "@types/react-bootstrap": "^0.32.25",
